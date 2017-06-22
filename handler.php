@@ -12,6 +12,8 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     if (isset($adm[$_POST['login']]) && $adm[$_POST['login']] == $_POST['password']) {
         $_SESSION['login'] = $_POST['login'];
         header('Location: adm1.php');
+
+
     }
     if (isset($user[$_POST['login']]) && $user[$_POST['login']]==$_POST['password']) {
         $_SESSION['login']=$_POST['login'];
@@ -21,4 +23,5 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
  else {
     header('Location: index.php');
 }
+
 
